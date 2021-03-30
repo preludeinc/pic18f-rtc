@@ -33,7 +33,7 @@ void __interrupt() tickINT(void)
 	TMR1H = 0x3C;                                               // FFFF - 50000 uS +1 = 3CB0
 	TMR1L += 0xB1;                                              // for 10 mS interrupt				
 	ticks++;                                                    // increments tick and adjusts time as necessary
-  LATC = ticks;                                               // tick count is displayed on LED bar
+  	LATC = ticks;                                               // tick count is displayed on LED bar
 	PIR1bits.TMR1IF = 0;                                        // clear timer1 interrupt flag
 } // end interrupt()
 

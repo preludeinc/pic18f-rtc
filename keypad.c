@@ -23,14 +23,15 @@ unsigned char keypad(void)
   Nop();
 	Nop();
     
-	LATBbits.LATB0 = 0;                 // 0 is rotated through lower nibble
+	LATBbits.LATB0 = 0;          // 0 is rotated through lower nibble
 	LATBbits.LATB1 = 1;                 
-	LATBbits.LATB2 = 1;                 // internal weak pull-ups - checks which is low
+	LATBbits.LATB2 = 1;          // internal weak pull-ups - checks which is low
 	LATBbits.LATB3 = 1;
 	Nop();
 	Nop();
 	
-  if(!PORTBbits.RB4)return('1');      // checking the first row of the keypad
+  // checking the first row of the keypad	
+  if(!PORTBbits.RB4)return('1');      
 	if(!PORTBbits.RB5)return('4');
 	if(!PORTBbits.RB6)return('7');
 	if(!PORTBbits.RB7)return('*');
@@ -39,7 +40,8 @@ unsigned char keypad(void)
 	Nop();
 	Nop();
 	
-  if(!PORTBbits.RB4)return('2');      // checking the second row of the keypad
+  // checking the second row of the keypad
+  if(!PORTBbits.RB4)return('2');     
 	if(!PORTBbits.RB5)return('5');
 	if(!PORTBbits.RB6)return('8');
 	if(!PORTBbits.RB7)return('0');
@@ -48,7 +50,8 @@ unsigned char keypad(void)
 	Nop();
 	Nop();
 	
-  if(!PORTBbits.RB4)return('3');      // checking the third row of the keypad
+  // checking the third row of the keypad	
+  if(!PORTBbits.RB4)return('3');      
 	if(!PORTBbits.RB5)return('6');	
 	if(!PORTBbits.RB6)return('9');
 	if(!PORTBbits.RB7)return('#');
@@ -56,8 +59,9 @@ unsigned char keypad(void)
 	LATBbits.LATB3 = 0;
 	Nop();
 	Nop();
-	
-    if(!PORTBbits.RB4)return('A');    // checking the fourth row of the keypad
+    
+    // checking the fourth row of the keypad
+    if(!PORTBbits.RB4)return('A');    
 	if(!PORTBbits.RB5)return('B');
 	if(!PORTBbits.RB6)return('C');
 	if(!PORTBbits.RB7)return('D');

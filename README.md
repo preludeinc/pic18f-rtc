@@ -1,1 +1,3 @@
-An external circuit involving a Matrix 4x4 keypad, a Hitachi LCD, and the eight-bit PIC18F4685 on an external breadboard has been wired together alongside this project. This project initializes a real-time clock, where the user can change the time using the external keypad. 
+## Real-Time Clock using a Microcontroller
+
+This project is a real-time clock, where the the time can be updated using the external keypad. An external circuit with Matrix 4x4 keypad, a Hitachi LCD, and eight-bit microcontroller - PIC18F4685 on an external breadboard was wired together as part of this project. 
